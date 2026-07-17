@@ -1,29 +1,86 @@
-# ==========================
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# -----------------------------
+# Airflow
+# -----------------------------
+airflow/logs/
+airflow/config/airflow.db
+airflow/config/webserver_config.py
+airflow/config/airflow.cfg
+
+# -----------------------------
 # Terraform
-# ==========================
+# -----------------------------
 terraform/.terraform/
 terraform/*.tfstate
-terraform/*.tfstate.backup
+terraform/*.tfstate.*
+terraform/crash.log
+terraform/.terraform.lock.hcl
 
-# ==========================
-# Python
-# ==========================
-**/.venv/
-**/__pycache__/
-**/*.pyc
-
-# ==========================
-# Environment Files
-# ==========================
-.env
-
-# ==========================
-# Logs
-# ==========================
-logs/
-*.log
-
-# ==========================
+# -----------------------------
 # VS Code
-# ==========================
+# -----------------------------
 .vscode/
+
+# -----------------------------
+# Operating System
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+logs/
+
+# -----------------------------
+# Environment Variables
+# -----------------------------
+# Ignore environment files except Airflow's .env
+*.env
+!airflow/.env
+
+# -----------------------------
+# Jupyter
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Build / Distribution
+# -----------------------------
+build/
+dist/
+*.egg
+
+# -----------------------------
+# Temporary Files
+# -----------------------------
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# -----------------------------
+# IDEs
+# -----------------------------
+.idea/
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker-compose.override.yml
