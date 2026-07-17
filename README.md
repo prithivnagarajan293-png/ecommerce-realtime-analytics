@@ -78,8 +78,53 @@ The objective of this project is to demonstrate production-oriented Data Enginee
 9. Power BI connects to Snowflake to visualize business KPIs.
 
 ---
+---
 
+# Pipeline Infrastructure Walkthrough
 
+Here is a step-by-step visual breakdown of the live pipeline, showing how data moves from local Docker containers through the cloud infrastructure.
+
+### 1. Local Containerized Infrastructure
+The pipeline relies on a containerized environment managed via Docker Compose. This includes our Apache Kafka cluster for message ingestion and Apache Airflow for process orchestration.
+
+| Apache Kafka Cluster | Apache Airflow Ingestion Orchestrator |
+|---|---|
+| ![Kafka Container](screenshots/kafka_container.PNG) | ![Airflow Container](screenshots/docker_airflow_orchestration_container.PNG) |
+
+### 2. Streaming Ingestion Engine
+A Python producer utilizing the `Faker` library streams mock e-commerce transactions in real time. The Kafka consumer processes these events from the topics and routes the raw JSON data directly to our cloud landing zone.
+
+* **Faker Python Data Producer:** Generates realistic, simulated e-commerce streams.
+![Faker Producer](screenshots/faker_py_producer.PNG)
+
+* **Raw Kafka JSON Ingestion:** Verifying raw JSON streams moving directly into cloud storage.
+![AWS S3 JSON Raw Data](screenshots/1aws_s3_streaming_json_from_kafka.PNG)
+
+### 3. Cloud Storage Layer (Amazon S3)
+Data lands in dedicated S3 buckets organized by pipeline stages to separate raw immutable data from processed gold-tier assets.
+
+* **AWS S3 Bucket Layout:**
+![S3 Buckets](screenshots/2aws_s3_buckets_for_databricks_and_ingestion.PNG)
+
+* **Gold Tier Outbound Directory:** Curated business metrics exported back to S3 from Databricks, staging them for warehouse consumption.
+![Databricks Gold Outbound S3](screenshots/3aws_s3_gold_data_from_databricks.PNG)
+
+### 4. Distributed Processing Layer (Databricks Delta Lake)
+Databricks mounts the S3 storage layers to securely process the data using Spark SQL and PySpark across the Medallion architecture.
+
+* **S3 Storage Authentication Setup:**
+![Connecting Databricks to S3](screenshots/databricks_connection_s3.PNG)
+
+* **Spark Analytical Tables:** Querying the high-performance Delta Lake tables managed inside Databricks.
+![Databricks Spark Table](screenshots/databricks_spark_table.PNG)
+
+### 5. Cloud Data Warehousing Layer (Snowflake)
+Curated datasets are ingested seamlessly into Snowflake from the gold-tier S3 bucket stage, making the cleaned metrics instantly queryable for downstream Business Intelligence tools.
+
+* **Snowflake Data Warehouse Storage Pipeline:**
+![S3 to Snowflake Gold Layer](screenshots/snowflake_gold_layer.PNG)
+
+---
 
 ![Medallion Architecture](architecture/medallion_architecture.png)
 
