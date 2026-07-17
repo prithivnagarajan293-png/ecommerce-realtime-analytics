@@ -1,4 +1,4 @@
-# End-to-End Real-Time Data Engineering Pipeline
+# End-to-End Real-Time Data Engineering Pipeline (E-Commerce streaming data)
 
 ![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
 ![Apache Kafka](https://img.shields.io/badge/Apache-Kafka-black?logo=apachekafka)
