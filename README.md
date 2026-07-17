@@ -21,7 +21,8 @@ The objective of this project is to demonstrate production-oriented Data Enginee
 
 ---
 
-# Solution Architecture
+
+
 
 ![Solution Architecture](architecture/solution_architecture.png)
 
@@ -58,7 +59,7 @@ The objective of this project is to demonstrate production-oriented Data Enginee
 
 ---
 
-# Modern Data Engineering Stack
+
 
 ![Technology Stack](architecture/data_architecture_flowchart.png)
 
@@ -78,7 +79,7 @@ The objective of this project is to demonstrate production-oriented Data Enginee
 
 ---
 
-# Medallion Architecture
+
 
 ![Medallion Architecture](architecture/medallion_architecture.png)
 
@@ -102,7 +103,7 @@ The objective of this project is to demonstrate production-oriented Data Enginee
 
 ---
 
-# Airflow Workflow
+
 
 ![Airflow Workflow](architecture/airflow_workflow.png)
 
