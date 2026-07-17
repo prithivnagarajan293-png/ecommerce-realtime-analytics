@@ -98,16 +98,16 @@ A Python producer utilizing the `Faker` library streams mock e-commerce transact
 ![Faker Producer](screenshots/faker_py_producer.PNG)
 
 * **Raw Kafka JSON Ingestion:** Verifying raw JSON streams moving directly into cloud storage.
-![AWS S3 JSON Raw Data](screenshots/1aws_s3_streaming_json_from_kafka.PNG)
+![AWS S3 JSON Raw Data](screenshots/aws_s3_streaming_json_from_kafka.PNG)
 
 ### 3. Cloud Storage Layer (Amazon S3)
 Data lands in dedicated S3 buckets organized by pipeline stages to separate raw immutable data from processed gold-tier assets.
 
 * **AWS S3 Bucket Layout:**
-![S3 Buckets](screenshots/2aws_s3_buckets_for_databricks_and_ingestion.PNG)
+![S3 Buckets](screenshots/aws_s3_buckets_for_databricks_and_ingestion.PNG)
 
 * **Gold Tier Outbound Directory:** Curated business metrics exported back to S3 from Databricks, staging them for warehouse consumption.
-![Databricks Gold Outbound S3](screenshots/3aws_s3_gold_data_from_databricks.PNG)
+![Databricks Gold Outbound S3](screenshots/aws_s3_gold_data_from_databricks.PNG)
 
 ### 4. Distributed Processing Layer (Databricks Delta Lake)
 Databricks mounts the S3 storage layers to securely process the data using Spark SQL and PySpark across the Medallion architecture.
@@ -125,6 +125,9 @@ Curated datasets are ingested seamlessly into Snowflake from the gold-tier S3 bu
 ![S3 to Snowflake Gold Layer](screenshots/snowflake_gold_layer.PNG)
 
 ---
+
+
+
 
 ![Medallion Architecture](architecture/medallion_architecture.png)
 
