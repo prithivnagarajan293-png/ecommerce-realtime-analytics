@@ -187,8 +187,8 @@ Power BI connects to Snowflake and visualizes business KPIs such as:
 - Regional Sales
 
 ![Power BI Dashboard](screenshots/powerbi_1.PNG)
- [Power BI Dashboard](screenshots/powerbi_2.PNG)
- [Power BI Dashboard](screenshots/powerbi_3.PNG)
+![Power BI Dashboard](screenshots/powerbi_2.PNG)
+![Power BI Dashboard](screenshots/powerbi_3.PNG)
 
 ---
 
