@@ -200,7 +200,7 @@ ecommerce-realtime-analytics/
 
 ```bash
 git clone https://github.com/prithivnagarajan293-png/ecommerce-realtime-analytics.git
-
+```
 ### Start Kafka
 
 ```bash
