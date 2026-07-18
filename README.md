@@ -146,7 +146,7 @@ Power BI connects to Snowflake and visualizes business KPIs such as:
 
 ---
 
-Medallion Architecture
+# **# Medallion Architecture**
 
 ### Bronze Layer
 
