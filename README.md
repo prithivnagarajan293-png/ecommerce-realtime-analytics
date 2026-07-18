@@ -131,6 +131,19 @@ Curated datasets are ingested seamlessly into Snowflake from the gold-tier S3 bu
 
 ![S3 to Snowflake Gold Layer](screenshots/snowflake_gold_layer.PNG)
 
+### 6. Dashboard
+
+Power BI connects to Snowflake and visualizes business KPIs such as:
+
+- Total Sales
+- Revenue Trends
+- Product Performance
+- Customer Insights
+- Regional Sales
+
+![Power BI Dashboard](screenshots/powerbi_1.PNG)
+![Power BI Dashboard](screenshots/powerbi_2.PNG)
+
 ---
 
 
@@ -228,22 +241,6 @@ python consumer.py
 ### Execute Airflow DAG
 
 Trigger the DAG from the Airflow UI.
-
----
-
-# Dashboard
-
-Power BI connects to Snowflake and visualizes business KPIs such as:
-
-- Total Sales
-- Revenue Trends
-- Product Performance
-- Customer Insights
-- Regional Sales
-
-![Power BI Dashboard](screenshots/powerbi_1.PNG)
-![Power BI Dashboard](screenshots/powerbi_2.PNG)
-![Power BI Dashboard](screenshots/powerbi_3.PNG)
 
 ---
 
