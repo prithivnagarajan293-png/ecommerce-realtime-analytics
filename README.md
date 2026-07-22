@@ -13,7 +13,7 @@
 
 # Overview
 
-This project demonstrates a modern end-to-end Data Engineering pipeline for processing streaming e-commerce transaction data.
+Engineered an enterprise-grade streaming pipeline capable of processing high-concurrency event streams into Delta Lake & Snowflake using a Medallion architecture.
 
 The solution ingests events through Apache Kafka, stores raw data in Amazon S3, transforms the data using the Medallion Architecture in Databricks, loads analytics-ready datasets into Snowflake, orchestrates the workflow using Apache Airflow, and visualizes business insights through Power BI dashboards.
 
